@@ -13,6 +13,7 @@ export class HomePage {
 	info = '<empty>';
 	token = '';
 	userId = '';
+	userInfo: any;
 
 	constructor(public navCtrl: NavController, public http: Http) {
 	}
@@ -81,7 +82,8 @@ export class HomePage {
 
 		).subscribe(data => {
 
-			this.info = data.json();
+			this.userInfo = data.json();
+			this.info = JSON.stringify(this.userInfo);
 
 		}, err => {
 
