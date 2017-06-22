@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Ionic Blank</ion-title>
+    </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-button full (click)="checkInstall()">Check QQ Install</ion-button>
+    <ion-button full (click)="login()">Log in</ion-button>
+    <ion-button full (click)="logoff()">Log off</ion-button>
+    <ion-button full (click)="getUserInfo()">Get User Info</ion-button>
+    <ion-card>
+    	<ion-card-title>Information</ion-card-title>
+    	<ion-content>{{info}}</ion-content>
+    </ion-card>
 </ion-content>
