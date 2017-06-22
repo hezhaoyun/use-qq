@@ -3,13 +3,15 @@
         <ion-title>Ionic Blank</ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content padding>
-    <ion-button full (click)="checkInstall()">Check QQ Install</ion-button>
-    <ion-button full (click)="login()">Log in</ion-button>
-    <ion-button full (click)="logoff()">Log off</ion-button>
-    <ion-button full (click)="getUserInfo()">Get User Info</ion-button>
+<ion-content>
     <ion-card>
-    	<ion-card-title>Information</ion-card-title>
-    	<ion-content>{{info}}</ion-content>
+    <button ion-button full (click)="checkInstall()">Check QQ Install</button>
+    <button ion-button full (click)="login()">Log in</button>
+    <button ion-button full (click)="logoff()">Log off</button>
+    <button ion-button full (click)="getUserInfo()">Get User Info</button>
+        <ion-card-header>Information</ion-card-header>
+        <ion-card-content>
+        {{info}}
+        </ion-card-content>
     </ion-card>
 </ion-content>

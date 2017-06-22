@@ -10,7 +10,7 @@ declare var QQSDK: any;
 })
 export class HomePage {
 
-	info = '';
+	info = '<empty>';
 	token = '';
 	userId = '';
 
