@@ -21,7 +21,7 @@ export class HomePage {
 	checkInstall() {
 
 		let args = {
-			client: QQSDK.ClientType.QQ // QQSDK.ClientType.QQ, QQSDK.ClientType.TIM;
+			client: QQSDK.ClientType.QQ // QQSDK.ClientType.QQ, QQSDK.ClientType.TIM,
 		};
 
 		QQSDK.checkClientInstalled(() => {
@@ -39,7 +39,7 @@ export class HomePage {
 	login() {
 
 		let args = {
-			client: QQSDK.ClientType.QQ // QQSDK.ClientType.QQ, QQSDK.ClientType.TIM;
+			client: QQSDK.ClientType.QQ // QQSDK.ClientType.QQ, QQSDK.ClientType.TIM,
 		};
 
 		QQSDK.ssoLogin(result => {
@@ -87,7 +87,22 @@ export class HomePage {
 
 		}, err => {
 
-			this.info = err
+			this.info = err;
+		});
+	}
+
+	openBrowser() {
+
+		this.navCtrl.push('BrowserPage', {
+			browserConfig: {
+				title: 'Bai Du',
+				url: 'https://www.baidu.com'
+			}
 		});
 	}
 }
+
+
+
+
+
