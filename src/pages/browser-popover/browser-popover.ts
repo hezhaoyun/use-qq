@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams } from 'ionic-angular';
+import { ViewController, NavParams } from 'ionic-angular';
 
-
-@IonicPage()
 @Component({
 	selector: 'page-browser-popover',
 	templateUrl: 'browser-popover.html',

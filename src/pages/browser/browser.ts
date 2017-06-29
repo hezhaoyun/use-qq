@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { DomSanitizer } from "@angular/platform-browser";
-import { HomePage } from '../home/home';
+import { BrowserPopoverPage } from '../browser-popover/browser-popover';
 
-@IonicPage()
+
 @Component({
 	selector: 'page-browser',
 	templateUrl: 'browser.html',
@@ -107,18 +107,12 @@ export class BrowserPage {
 				this.reload();
 			},
 			close: () => {
-
-				if (this.navCtrl.length() < 2) {
-					this.navCtrl.setRoot(HomePage);
-				}
-				else {
-					this.navCtrl.pop();	
-				}
+				this.navCtrl.pop();
 			}
 		};
 
 		let popover = this.popoverCtrl.create(
-			'BrowserPopoverPage',
+			BrowserPopoverPage,
 			{ callback: callback }
 		);
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { BrowserPage } from '../browser/browser';
 
 declare var QQSDK: any;
 
@@ -93,7 +94,7 @@ export class HomePage {
 
 	openBrowser() {
 
-		this.navCtrl.push('BrowserPage', {
+		this.navCtrl.push(BrowserPage, {
 			browserConfig: {
 				title: 'Bai Du',
 				url: 'https://www.baidu.com'

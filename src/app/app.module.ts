@@ -7,11 +7,16 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BrowserPage } from '../pages/browser/browser';
+import { BrowserPopoverPage } from '../pages/browser-popover/browser-popover';
+
 
 @NgModule({
     declarations: [
         MyApp,
-        HomePage
+        HomePage,
+        BrowserPage,
+        BrowserPopoverPage
     ],
     imports: [
         BrowserModule,
@@ -21,7 +26,9 @@ import { HomePage } from '../pages/home/home';
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        HomePage
+        HomePage,
+        BrowserPage,
+        BrowserPopoverPage
     ],
     providers: [
         StatusBar,
